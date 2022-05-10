@@ -1,0 +1,17 @@
+
+adm_lev@hostub01:/etc$ ls -l | grep ^- | cut -d ' ' -f 1
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r-----
+# много строк
+adm_lev@hostub01:/etc$ ls -l | grep ^- | cut -d ' ' -f 1 | sort -u
+-r--r-----
+-r--r--r--
+-rw-r-----
+-rw-r--r--
+-rw-rw-r-- 

@@ -1,0 +1,37 @@
+
+adm_lev@hostub01:/etc/ssh$ ssh adm_lev@192.168.0.105
+adm_lev@srvub01:~$
+adm_lev@srvub01:~$ cd /etc/ssh/
+adm_lev@srvub01:/etc/ssh$ ls
+moduli sshd_config ssh_host_dsa_key.pub ssh_host_ed25519_key ssh_host_rsa_key.pub
+ssh_config sshd_config.d ssh_host_ecdsa_key ssh_host_ed25519_key.pub ssh_import_id
+ssh_config.d ssh_host_dsa_key ssh_host_ecdsa_key.pub ssh_host_rsa_key
+adm_lev@srvub01:/etc/ssh$ sudo nano sshd_config
+[sudo] password for adm_lev:
+# редактирование файла
+# ��Д процесса
+# 45753 root 20 0 13956 9196 7720 S 0,0 0,5 0:00.01 sshd
+adm_lev@srvub01:/etc/ssh$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'ssh.service'.
+Authenticating as: Eugene (adm_lev)
+Password:
+==== AUTHENTICATION COMPLETE ===
+adm_lev@srvub01:/etc/ssh$ top
+# 45955 root 20 0 12176 7052 6208 S 0,0 0,3 0:00.00 sshd
+adm_lev@srvub01:/etc/ssh$ systemctl reload sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to reload 'ssh.service'.
+Authenticating as: Eugene (adm_lev)
+Password:
+==== AUTHENTICATION COMPLETE ===
+adm_lev@srvub01:/etc/ssh$ top
+45955 root 20 0 12176 6880 6036 S 0,0 0,3 0:00.01 sshd
+# при команде reload ��Д процесса остается прежним
+
+
+adm_lev@hostub01:~$ cat > f1
+1
+2
+3
+4 
