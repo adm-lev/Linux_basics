@@ -1,0 +1,34 @@
+
+adm_lev@hostub01:/etc$
+adm_lev@hostub01:/etc$ cd ~
+adm_lev@hostub01:~$ echo 'Hello file' > 123
+adm_lev@hostub01:~$ ls
+123 321 snap Видео Документы Загрузки ��зображения Музыка Общедоступные '� абочий стол' Шаблоны
+adm_lev@hostub01:~$ more 123
+Hello file
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ cd /etc
+adm_lev@hostub01:/etc$ cat * 2> /home/adm_lev/321
+# /etc/adduser.conf: `adduser' configuration.
+# See adduser(8) and adduser.conf(5) for full documentation.
+
+# The DSHELL variable specifies the default login shell on your
+# system.
+DSHELL=/bin/bash
+
+# The DHOME variable specifies the directory containing users' home
+# directories.
+DHOME=/home
+
+
+# ...many lines...
+adm_lev@hostub01:/etc$ cd /home/adm_lev
+adm_lev@hostub01:~$ more 321
+cat: acpi: Это каталог
+cat: alsa: Это каталог
+cat: alternatives: Это каталог
+cat: apache2: Это каталог
+cat: apm: Это каталог
+cat: apparmor: Это каталог
+cat: apparmor.d: Это каталог
+# ...many lines... 

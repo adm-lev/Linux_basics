@@ -1,0 +1,11 @@
+Я знаю нужные кодировки   
+Windows-1251
+ => 
+UTF-8
+  Hint
+Раскодировать как в предыдущий раз  Hint
+# запускаем thunderbird
+adm_lev@hostub01:~$ top
+42095 adm_lev 20 0 3131408 311316 160780 S 0,0 7,7 0:05.87 thunderbird
+# PID to signal/kill [default pid = 935] 42095
+# Send pid 42095 signal [15/sigterm] 9 
