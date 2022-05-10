@@ -1,0 +1,9 @@
+
+adm_lev@hostub01:~$ sudo docker run -it ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+08c01a0ec47e: Pull complete
+Digest: sha256:669e010b58baf5beb2836b253c1fd5768333f0d1dbcb834f7c07a4dc93f474be
+Status: Downloaded newer image for ubuntu:latest
+root@138b14c5567e:/#
+root@138b14c5567e:/# 

@@ -1,0 +1,218 @@
+adm_lev@hostub01:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Сущ:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Может быть обновлено 17 пакетов. Запустите «apt list --upgradable» для их показа.
+adm_lev@hostub01:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Уже установлен пакет ca-certificates самой новой версии (20210119~20.04.2).
+ca-certificates помечен как установленный вручную.
+Уже установлен пакет software-properties-common самой новой версии (0.99.9.8).
+software-properties-common помечен как установленный вручную.
+Следующие НОВЫЕ пакеты будут установлены:
+apt-transport-https curl
+Обновлено 0 пакетов, установлено 2 новых пакетов, для удаления отмечено 0 пакетов, и 17 пакетов не обновлено.
+Необходимо скачать 166 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 573 kB.
+Хотите продолжить? [Д/н] y
+Прервано.
+adm_lev@hostub01:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Уже установлен пакет ca-certificates самой новой версии (20210119~20.04.2).
+ca-certificates помечен как установленный вручную.
+Уже установлен пакет software-properties-common самой новой версии (0.99.9.8).
+software-properties-common помечен как установленный вручную.
+Следующие НОВЫЕ пакеты будут установлены:
+apt-transport-https curl
+Обновлено 0 пакетов, установлено 2 новых пакетов, для удаления отмечено 0 пакетов, и 17 пакетов не обновлено.
+Необходимо скачать 166 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 573 kB.
+Хотите продолжить? [Д/н] Y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.6 [4 680 B]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.7 [161 kB]
+Получено 166 kB за 0с (1 629 kB/s)
+Выбор ранее не выбранного пакета apt-transport-https.
+(Чтение базы данных … на данный момент установлено 231458 файлов и каталогов.)
+Подготовка к распаковке …/apt-transport-https_2.0.6_all.deb …
+� аспаковывается apt-transport-https (2.0.6) …
+Выбор ранее не выбранного пакета curl.
+Подготовка к распаковке …/curl_7.68.0-1ubuntu2.7_amd64.deb …
+� аспаковывается curl (7.68.0-1ubuntu2.7) …
+Настраивается пакет apt-transport-https (2.0.6) …
+Настраивается пакет curl (7.68.0-1ubuntu2.7) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+OK
+dm_lev@hostub01:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Пол:4 https://download.docker.com/linux/ubuntu focal InRelease [57,7 kB]
+Сущ:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Пол:6 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [13,5 kB]
+Получено 71,2 kB за 1с (89,3 kB/s)
+Чтение списков пакетов… Готово
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Сущ:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+Сущ:5 https://download.docker.com/linux/ubuntu focal InRelease
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Может быть обновлено 17 пакетов. Запустите «apt list --upgradable» для их показа.
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ apt-cache policy docker-ce
+docker-ce:
+Установлен: (отсутствует)
+Кандидат: 5:20.10.12~3-0~ubuntu-focal
+Таблица версий:
+5:20.10.12~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.11~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.10~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.9~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.8~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.7~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.6~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.5~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.4~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.3~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.2~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.1~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:20.10.0~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.15~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.14~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.13~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.12~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.11~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.10~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+5:19.03.9~3-0~ubuntu-focal 500
+500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ sudo apt install docker-ce
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+containerd.io docker-ce-cli docker-ce-rootless-extras docker-scan-plugin git git-man liberror-perl pigz slirp4netns
+Предлагаемые пакеты:
+aufs-tools cgroupfs-mount | cgroup-lite git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+git-mediawiki git-svn
+Следующие НОВЫЕ пакеты будут установлены:
+containerd.io docker-ce docker-ce-cli docker-ce-rootless-extras docker-scan-plugin git git-man liberror-perl pigz slirp4netns
+Обновлено 0 пакетов, установлено 10 новых пакетов, для удаления отмечено 0 пакетов, и 17 пакетов не обновлено.
+Необходимо скачать 103 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 447 MB.
+Хотите продолжить? [Д/н] Y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57,4 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26,5 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.2 [884 kB]
+Пол:4 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.4.12-1 [23,7 MB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.2 [4 554 kB]
+Пол:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:20.10.12~3-0~ubuntu-focal [40,7 MB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 slirp4netns amd64 0.4.3-1 [74,3 kB]
+Пол:8 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:20.10.12~3-0~ubuntu-focal [21,2 MB]
+Пол:9 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-rootless-extras amd64 5:20.10.12~3-0~ubuntu-focal [7 921 kB]
+Пол:10 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-scan-plugin amd64 0.12.0~ubuntu-focal [3 518 kB]
+Получено 103 MB за 9с (10,9 MB/s)
+Выбор ранее не выбранного пакета pigz.
+(Чтение базы данных … на данный момент установлено 231469 файлов и каталогов.)
+Подготовка к распаковке …/0-pigz_2.4-1_amd64.deb …
+� аспаковывается pigz (2.4-1) …
+Выбор ранее не выбранного пакета containerd.io.
+Подготовка к распаковке …/1-containerd.io_1.4.12-1_amd64.deb …
+� аспаковывается containerd.io (1.4.12-1) …
+Выбор ранее не выбранного пакета docker-ce-cli.
+Подготовка к распаковке …/2-docker-ce-cli_5%3a20.10.12~3-0~ubuntu-focal_amd64.deb …
+� аспаковывается docker-ce-cli (5:20.10.12~3-0~ubuntu-focal) …
+Выбор ранее не выбранного пакета docker-ce.
+Подготовка к распаковке …/3-docker-ce_5%3a20.10.12~3-0~ubuntu-focal_amd64.deb …
+� аспаковывается docker-ce (5:20.10.12~3-0~ubuntu-focal) …
+Выбор ранее не выбранного пакета docker-ce-rootless-extras.
+Подготовка к распаковке …/4-docker-ce-rootless-extras_5%3a20.10.12~3-0~ubuntu-focal_amd64.deb …
+� аспаковывается docker-ce-rootless-extras (5:20.10.12~3-0~ubuntu-focal) …
+Выбор ранее не выбранного пакета docker-scan-plugin.
+Подготовка к распаковке …/5-docker-scan-plugin_0.12.0~ubuntu-focal_amd64.deb …
+� аспаковывается docker-scan-plugin (0.12.0~ubuntu-focal) …
+Выбор ранее не выбранного пакета liberror-perl.
+Подготовка к распаковке …/6-liberror-perl_0.17029-1_all.deb …
+� аспаковывается liberror-perl (0.17029-1) …
+Выбор ранее не выбранного пакета git-man.
+Подготовка к распаковке …/7-git-man_1%3a2.25.1-1ubuntu3.2_all.deb …
+� аспаковывается git-man (1:2.25.1-1ubuntu3.2) …
+Выбор ранее не выбранного пакета git.
+Подготовка к распаковке …/8-git_1%3a2.25.1-1ubuntu3.2_amd64.deb …
+� аспаковывается git (1:2.25.1-1ubuntu3.2) …
+Выбор ранее не выбранного пакета slirp4netns.
+Подготовка к распаковке …/9-slirp4netns_0.4.3-1_amd64.deb …
+� аспаковывается slirp4netns (0.4.3-1) …
+Настраивается пакет slirp4netns (0.4.3-1) …
+Настраивается пакет docker-scan-plugin (0.12.0~ubuntu-focal) …
+Настраивается пакет liberror-perl (0.17029-1) …
+Настраивается пакет containerd.io (1.4.12-1) …
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Настраивается пакет docker-ce-cli (5:20.10.12~3-0~ubuntu-focal) …
+Настраивается пакет pigz (2.4-1) …
+Настраивается пакет git-man (1:2.25.1-1ubuntu3.2) …
+Настраивается пакет docker-ce-rootless-extras (5:20.10.12~3-0~ubuntu-focal) …
+Настраивается пакет docker-ce (5:20.10.12~3-0~ubuntu-focal) …
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Настраивается пакет git (1:2.25.1-1ubuntu3.2) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для systemd (245.4-4ubuntu3.15) …
+adm_lev@hostub01:~$
+sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+Active: active (running) since Tue 2022-02-08 19:18:41 EET; 1min 27s ago
+TriggeredBy: ● docker.socket
+Docs: https://docs.docker.com
+Main PID: 60936 (dockerd)
+Tasks: 8
+Memory: 28.7M
+CGroup: /system.slice/docker.service
+└─60936 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.511936909+02:00" level=warning msg="Your kernel does not support CPU realti>
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.511967289+02:00" level=warning msg="Your kernel does not support cgroup blk>
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.511978083+02:00" level=warning msg="Your kernel does not support cgroup blk>
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.512273603+02:00" level=info msg="Loading containers: start."
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.676352600+02:00" level=info msg="Default bridge (docker0) is assigned with >
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.789175018+02:00" level=info msg="Loading containers: done."
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.873044659+02:00" level=info msg="Docker daemon" commit=459d0df graphdriver(>
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.873142097+02:00" level=info msg="Daemon has completed initialization"
+фев 08 19:18:41 hostub01 systemd[1]: Started Docker Application Container Engine.
+фев 08 19:18:41 hostub01 dockerd[60936]: time="2022-02-08T19:18:41.989188551+02:00" level=info msg="API listen on /run/docker.sock"
+
+adm_lev@hostub01:~$ 
