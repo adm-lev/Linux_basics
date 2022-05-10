@@ -1,0 +1,22 @@
+adm_lev@hostub01:~$ ssh adm_lev@192.168.0.106
+The authenticity of host '192.168.0.106 (192.168.0.106)' can't be established.
+ECDSA key fingerprint is SHA256:d6Gs11xQMQO7pDbOB5ENayQeK4l8B7u9nxJWx7C+y54.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.0.106' (ECDSA) to the list of known hosts.
+adm_lev@192.168.0.106's password: 
+Last login: Sun Dec 19 00:17:42 2021 from 192.168.0.104
+[adm_lev@localhost ~]$ hostnamectl
+   Static hostname: localhost.localdomain
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: c3f5b713b27b08489d01d8056c95a6b6
+           Boot ID: 049df4ea5bb54888af20f7c8ae9c14a0
+    Virtualization: kvm
+  Operating System: CentOS Linux 7 (Core)
+       CPE OS Name: cpe:/o:centos:centos:7
+            Kernel: Linux 3.10.0-1160.el7.x86_64
+      Architecture: x86-64
+[adm_lev@localhost ~]$ exit
+logout
+Connection to 192.168.0.106 closed.
+adm_lev@hostub01:~$ 

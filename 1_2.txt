@@ -1,0 +1,17 @@
+
+adm_lev@hostub01:~$ nano students/students_list.txt
+adm_lev@hostub01:~$ #...
+adm_lev@hostub01:~$ nano mentors/mentors_list.txt
+adm_lev@hostub01:~$ #...
+adm_lev@hostub01:~$ more students/students_list.txt
+Карина Апаева
+Литвинцев Алексей
+Константин Петров
+Лада Золотухина
+Jasur Maratov
+Андрей Бессонов
+adm_lev@hostub01:~$ more mentors/mentors_list.txt
+Наталия Солина
+Алена Тектова
+Елена Федотова
+Арслан Еркинов 

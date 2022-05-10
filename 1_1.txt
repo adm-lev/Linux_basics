@@ -1,0 +1,27 @@
+
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ cd ~
+adm_lev@hostub01:~$ pwd
+/home/adm_lev
+adm_lev@hostub01:~$ mkdir students mentors
+adm_lev@hostub01:~$ touch students/students_list.txt mentors/mentors_list.txt
+adm_lev@hostub01:~$ tree
+.
+├── mentors
+│   └── mentors_list.txt
+├── snap
+│   └── snap-store
+│   ├── 547
+│   ├── 558
+│   ├── common
+│   └── current -> 558
+├── students
+│   └── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── ��зображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+└── Шаблоны 
