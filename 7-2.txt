@@ -1,0 +1,7 @@
+
+adm_lev@hostub01:~$ snap search chucknorris
+Название Версия ��здатель Примечание Описание
+chucknorris 1.3 kz6fittycent - Chuck Norris Jokes
+adm_lev@hostub01:~$ snap install chucknorris
+chucknorris 1.3 от James Tigert (kz6fittycent) установлен
+adm_lev@hostub01:~$ 

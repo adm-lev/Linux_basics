@@ -1,0 +1,31 @@
+
+adm_lev@hostub01:~$ sudo iptables -P INPUT DROP
+adm_lev@hostub01:~$ ifconfig
+docker0: flags=4099 mtu 1500
+inet 172.17.0.1 netmask 255.255.0.0 broadcast 172.17.255.255
+inet6 fe80::42:ff:fe45:3030 prefixlen 64 scopeid 0x20
+ether 02:42:00:45:30:30 txqueuelen 0 (Ethernet)
+RX packets 0 bytes 0 (0.0 B)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 33 bytes 5882 (5.8 KB)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+enp0s3: flags=4163 mtu 1500
+inet 192.168.0.107 netmask 255.255.255.0 broadcast 192.168.0.255
+ether 08:00:27:17:1a:89 txqueuelen 1000 (Ethernet)
+RX packets 809316 bytes 838875424 (838.8 MB)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 265729 bytes 24391571 (24.3 MB)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+lo: flags=73 mtu 65536
+inet 127.0.0.1 netmask 255.0.0.0
+inet6 ::1 prefixlen 128 scopeid 0x10loop txqueuelen 1000 (Локальная петля (Loopback))
+RX packets 6002 bytes 607231 (607.2 KB)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 6002 bytes 607231 (607.2 KB)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+adm_lev@hostub01:~$ sudo iptables -A INPUT -i enp0s3 -p tcp --dport 80 -j ACCEPT
+adm_lev@hostub01:~$ sudo iptables -A INPUT -i enp0s3 -p tcp --dport 22 -j ACCEPT
+adm_lev@hostub01:~$ 
