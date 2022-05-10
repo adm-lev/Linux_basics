@@ -1,0 +1,37 @@
+
+adm_lev@hostub01:/home$ sudo groupadd workgroup
+adm_lev@hostub01:/home$ sudo groupadd workgroup1
+adm_lev@hostub01:/home$ sudo usermod -aG workgroup new_user
+adm_lev@hostub01:/home$ tail /etc/group
+gdm:x:130:
+sssd:x:131:
+lxd:x:132:adm_lev
+adm_lev:x:1000:
+sambashare:x:133:adm_lev
+systemd-coredump:x:999:
+vboxsf:x:998:
+new_user:x:1001:
+workgroup:x:1002:new_user
+workgroup1:x:1003:
+adm_lev@hostub01:/home$ sudo usermod -aG workgroup1 new_user
+adm_lev@hostub01:/home$ tail /etc/group
+gdm:x:130:
+sssd:x:131:
+lxd:x:132:adm_lev
+adm_lev:x:1000:
+sambashare:x:133:adm_lev
+systemd-coredump:x:999:
+vboxsf:x:998:
+new_user:x:1001:
+workgroup:x:1002:new_user
+workgroup1:x:1003:new_user
+adm_lev@hostub01:/home$ su - new_user
+Пароль:
+new_user@hostub01:~$ id -Gn
+new_user workgroup workgroup1
+adm_lev@hostub01:/home/new_user$ sudo deluser new_user workgroup1
+Удаляется пользователь «new_user» из группы «workgroup1» ...
+Готово.
+adm_lev@hostub01:/home/new_user$ sudo deluser new_user workgroup
+Удаляется пользователь «new_user» из группы «workgroup» ...
+Готово.
