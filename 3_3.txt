@@ -1,0 +1,12 @@
+
+adm_lev@hostub01:/home/new_user$ sudo usermod -aG sudo new_user
+adm_lev@hostub01:/home/new_user$ su new_user
+Пароль:
+To run a command as administrator (user "root"), use "sudo ".
+See "man sudo_root" for details.
+
+new_user@hostub01:~$ sudo whoami
+[sudo] пароль для new_user:
+root
+new_user@hostub01:~$ whoami
+new_user
