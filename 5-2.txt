@@ -1,0 +1,10 @@
+adm_lev@hostub01:~$ mv f1 file1
+adm_lev@hostub01:~$ mv f2 file2
+adm_lev@hostub01:~$ ln -s file1 file1_symlink
+adm_lev@hostub01:~$ ln -s file2 file2_symlink
+adm_lev@hostub01:~$ mkdir links
+adm_lev@hostub01:~$ mv *_symlink links/
+adm_lev@hostub01:~$ cd links
+adm_lev@hostub01:~/links$ ls
+file1_symlink  file2_symlink
+adm_lev@hostub01:~/links$  
