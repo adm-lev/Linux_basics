@@ -1,0 +1,6 @@
+adm_lev@hostub01:~/links$ cd ..
+adm_lev@hostub01:~$ echo 'first' > file1
+adm_lev@hostub01:~$ echo 'second' > file2
+adm_lev@hostub01:~$ chmod 664 file1
+adm_lev@hostub01:~$ chmod u=rw,g-rw,o-r file2
+adm_lev@hostub01:~$  

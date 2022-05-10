@@ -1,0 +1,48 @@
+adm_lev@hostub01:~$ echo 'sample' > f1
+adm_lev@hostub01:~$ cp f1 f2
+adm_lev@hostub01:~$ ls
+123 f1 snap Документы ��зображения Общедоступные Шаблоны
+321 f2 Видео Загрузки Музыка '� абочий стол'
+adm_lev@hostub01:~$ cp -s f1 f3
+adm_lev@hostub01:~$ ls
+123 f1 f3 Видео Загрузки Музыка '� абочий стол'
+321 f2 snap Документы ��зображения Общедоступные Шаблоны
+adm_lev@hostub01:~$ ln f1 f4
+adm_lev@hostub01:~$ ls -li
+итого 60
+914073 -rw-rw-r-- 1 adm_lev adm_lev 11 янв 30 13:13 123
+914077 -rw-rw-r-- 1 adm_lev adm_lev 5050 янв 30 13:10 321
+914097 -rw-rw-r-- 2 adm_lev adm_lev 7 янв 30 17:33 f1
+913955 -rw-rw-r-- 1 adm_lev adm_lev 7 янв 30 17:33 f2
+914096 lrwxrwxrwx 1 adm_lev adm_lev 2 янв 30 17:33 f3 -> f1
+914097 -rw-rw-r-- 2 adm_lev adm_lev 7 янв 30 17:33 f4
+1052297 drwx------ 3 adm_lev adm_lev 4096 дек 19 18:12 snap
+1047663 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Видео
+1047657 drwxr-xr-x 4 adm_lev adm_lev 4096 дек 26 20:46 Документы
+1047654 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Загрузки
+1047662 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 ��зображения
+1047659 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Музыка
+1047656 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Общедоступные
+1047652 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 '� абочий стол'
+adm_lev@hostub01:~$ rm f1
+adm_lev@hostub01:~$ ls -li
+итого 56
+914073 -rw-rw-r-- 1 adm_lev adm_lev 11 янв 30 13:13 123
+914077 -rw-rw-r-- 1 adm_lev adm_lev 5050 янв 30 13:10 321
+913955 -rw-rw-r-- 1 adm_lev adm_lev 7 янв 30 17:33 f2
+914096 lrwxrwxrwx 1 adm_lev adm_lev 2 янв 30 17:33 f3 -> f1 # ссылка сломана
+914097 -rw-rw-r-- 1 adm_lev adm_lev 7 янв 30 17:33 f4
+1052297 drwx------ 3 adm_lev adm_lev 4096 дек 19 18:12 snap
+1047663 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Видео
+1047657 drwxr-xr-x 4 adm_lev adm_lev 4096 дек 26 20:46 Документы
+1047654 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Загрузки
+1047662 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 ��зображения
+1047659 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Музыка
+1047656 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Общедоступные
+1047652 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 '� абочий стол'
+1047655 drwxr-xr-x 2 adm_lev adm_lev 4096 дек 19 17:44 Шаблоны
+adm_lev@hostub01:~$
+adm_lev@hostub01:~$ cat f4
+sample
+adm_lev@hostub01:~$ cat f3
+cat: f3: Нет такого файла или каталога 
