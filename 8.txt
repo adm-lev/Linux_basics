@@ -1,0 +1,62 @@
+adm_lev@hostub01:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/adm_lev/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/adm_lev/.ssh/id_rsa
+Your public key has been saved in /home/adm_lev/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:BVlQhNP6daKMsKczPREx+i+CeTCU3moQGJ2vZNrkw8I adm_lev@hostub01
+The key's randomart image is:
++---[RSA 3072]----+
+| . .    oO+      |
+|. o     *..      |
+| o . . . =.      |
+|. = + o o.  o .  |
+|.O = . +S= o o   |
+|oEB + o = +      |
+| . o * + o       |
+|    = * + .      |
+|   . . + o       |
++----[SHA256]-----+
+adm_lev@hostub01:~$ ssh-copy-id adm_lev@192.168.0.105
+The authenticity of host '192.168.0.105 (192.168.0.105)' can't be established.
+ECDSA key fingerprint is SHA256:0N72MisAR9+7GVf55Ras3C7bJBGtk6PQAVY3SJ/IVc4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+adm_lev@192.168.0.105's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'adm_lev@192.168.0.105'"
+and check to make sure that only the key(s) you wanted were added.
+
+adm_lev@hostub01:~$ ssh adm_lev@192.168.0.105
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-91-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Р’СЃ 19 РґРµРє 2021 17:33:34 UTC
+
+  System load:  0.0               Processes:               116
+  Usage of /:   46.7% of 8.79GB   Users logged in:         1
+  Memory usage: 12%               IPv4 address for enp0s3: 192.168.0.105
+  Swap usage:   0%
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+43 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Sun Dec 19 17:10:31 2021 from 192.168.0.107
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+adm_lev@srvub01:~$ 

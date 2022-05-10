@@ -1,0 +1,47 @@
+adm_lev@hostub01:~$ mv mentors/mentors_list.txt students
+adm_lev@hostub01:~$ rmdir mentors
+adm_lev@hostub01:~$ mv students students_and_mentors
+adm_lev@hostub01:~$ tree
+.
+├── snap
+│� � └── snap-store
+│� � ├── 547
+│� � ├── 558
+│� � ├── common
+│� � └── current -> 558
+├── students_and_mentors
+│� � ├── mentors_list.txt
+│� � └── students_list.txt
+├── Видео
+├── Документы
+│� � └── lesson-2
+│� � ├── 1.txt
+│� � └── 2.txt
+├── Загрузки
+├── ��зображения
+├── Музыка
+├── Общедоступные
+├── � абочий стол
+└── Шаблоны
+
+16 directories, 4 files
+adm_lev@hostub01:~$ rm -r students_and_mentors
+adm_lev@hostub01:~$ tree
+.
+├── snap
+│� � └── snap-store
+│� � ├── 547
+│� � ├── 558
+│� � ├── common
+│� � └── current -> 558
+├── Видео
+├── Документы
+│� � └── lesson-2
+│� � ├── 1.txt
+│� � └── 2.txt
+├── Загрузки
+├── ��зображения
+├── Музыка
+├── Общедоступные
+├── � абочий стол
+└── Шаблоны
